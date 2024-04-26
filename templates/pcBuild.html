@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Customize Your PC {% endblock title %}
+{% block css %}
+    .card > img{
+        width: 50px;
+        height: 50px;
+    }
+{% endblock css %}
+{% block body %}
+<div class="container">
+    <div>
+        <h1>Customize Your PC</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mb-4 left-side">
+            <div class="card mb-2">
+                <div class="card-header">
+                    Select Processor
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <img src="{% static 'Icons/processor-icon1.svg' %}" alt="processor icon">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myItemsModal" >&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Motherboard</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/Motherboard_icon.svg' %}" alt="Motherboard icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select RAM</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/ram-caticon.svg' %}" alt="RAM icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Storage 1</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/storage-caticon.svg' %}" alt="Storage icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Storage 2</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/storage-caticon.svg' %}" alt="Storage icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Cabinet</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/cabinets-caticon.svg' %}" alt="Cabinet icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Cabinet Fan</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/cabinetfan-caticon.svg' %}" alt="Cabinet Fan icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Cooler</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/cooler-caticon.svg' %}" alt="Cooler icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Graphics Card</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/graphiccard-caticon.svg' %}" alt="Graphics Card icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Power Supply Unit</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/powersupply-caticon.svg' %}" alt="Power supply Unit icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div>Select Monitor</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/monitor-caticon.svg' %}" alt="Monitor icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Keyboard</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/keyboard-caticon.svg' %}" alt="Keyboard icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Mouse</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/mouse-caticon.svg' %}" alt="Mouse icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="card-header">Select Accessories</div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+        
+                    <img src="{% static 'Icons/gaminglaptop-caticon.svg' %}" alt="Accessories icon" />
+                    <button class="btn btn-primary">&plus;</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 right-side">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <div class="card-item"> Total: <span>₹3333.00</span></div>
+                    <div class="card-item d-flex flex-column justify-content-center align-items-center"> 
+                        <button class="btn btn-primary mb-2">Add to cart</button>
+                        <button class="btn btn-primary">Remove All</button>
+                    </div>
+
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+</div>
+
+<div class="modal" id="myItemsModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">Product Details</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+        <!-- Display products in card format -->
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">Price: ₹{{ product.price }}</p>
+                        <a href="#" class="btn btn-important">Select</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+      </div>
+    </div>
+</div>
+  
+{% endblock body %}
